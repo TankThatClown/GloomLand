@@ -40,6 +40,23 @@ public class ModBlocks{
     .sound(SoundType.CROP)
     .noCollission()
     .lightLevel(state->16)));
+
+    public static final RegistryObject<Block> GlOWSHROOM_CAP= BLOCKS.register("glowshroom_cap",
+    ()-> new Block(BlockBehaviour.Properties.of()
+    .mapColor(MapColor.COLOR_LIGHT_BLUE)
+    .sound(SoundType.GRASS)
+    .strength(0.2f,0.0f)
+    .lightLevel(state->16)
+    ));
+
+    public static final RegistryObject<Block> GLOWSHROOM_STALK= BLOCKS.register("glowshroom_stalk",
+    ()-> new Block(BlockBehaviour.Properties.of()
+    .mapColor(MapColor.COLOR_GRAY)
+    .sound(SoundType.WOOD)
+    .strength(1.0f,2.0f)
+    .lightLevel(state->16)
+    ));
+
     static{
             GloomMod.transparentBlock.add(GLOWSHROOM);
     }

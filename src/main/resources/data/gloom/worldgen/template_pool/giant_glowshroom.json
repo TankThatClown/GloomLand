@@ -1,0 +1,22 @@
+
+    {
+  "name": "gloom:giant_glowshroom",
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+
+       
+        "location": "gloom:giant_glowshroom",
+
+        "processors": "minecraft:empty",
+
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

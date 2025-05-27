@@ -1,0 +1,18 @@
+
+{
+  "structures": [
+    {
+      "structure": "gloom:giant_glowshroom",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1642137474,
+
+    "spacing": 20,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}

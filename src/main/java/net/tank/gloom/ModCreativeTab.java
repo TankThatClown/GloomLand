@@ -19,6 +19,8 @@ public class ModCreativeTab {
                 output.accept(ModItems.GLOOM_DIRT_ITEM.get());
                 output.accept(ModItems.GLOOM_GRASS_ITEM.get());
                 output.accept(ModItems.GLOWSHROOM.get());
+                output.accept(ModItems.GLOWSHROOM_CAP.get());
+                output.accept(ModItems.GLOWSHROOM_STALK.get());
             })
             .build()
     );
