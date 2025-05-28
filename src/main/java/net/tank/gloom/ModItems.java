@@ -36,6 +36,8 @@ public class ModItems {
      public static final RegistryObject<Item> GLOWSHROOM_STALK = ITEMS.register("glowshroom_stalk",
     ()-> new BlockItem(ModBlocks.GLOWSHROOM_STALK.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> GLOOM_IRON_ORE = ITEMS.register("gloom_iron_ore",
+    ()-> new BlockItem(ModBlocks.GLOOM_IRON_ORE.get(),new Item.Properties()));
          public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

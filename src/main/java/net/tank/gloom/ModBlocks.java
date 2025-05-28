@@ -56,7 +56,9 @@ public class ModBlocks{
     .strength(1.0f,2.0f)
     .lightLevel(state->16)
     ));
-
+    public static final RegistryObject<Block> GLOOM_IRON_ORE = BLOCKS.register("gloom_iron_ore",
+    ()-> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
+    
     static{
             GloomMod.transparentBlock.add(GLOWSHROOM);
     }

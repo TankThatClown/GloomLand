@@ -1,6 +1,6 @@
 
     {
-  "name": "gloom:giant_glowshroom",
+  "name": "gloom:giant_glowshroom_patch",
   "fallback": "minecraft:empty",
 
   "elements": [
@@ -9,7 +9,7 @@
       "element": {
 
        
-        "location": "gloom:giant_glowshroom",
+        "location": "gloom:giant_glowshroom_patch",
 
         "processors": "minecraft:empty",
 
