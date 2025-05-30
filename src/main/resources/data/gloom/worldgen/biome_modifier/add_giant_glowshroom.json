@@ -2,6 +2,6 @@
   "type": "minecraft:add_features",
   "biomes": ["minecraft:plains"],
   "features": [
-    "gloom:giant_glowshroom"
+    "minecraft:spruce"
   ]
 }
