@@ -1,7 +1,6 @@
 {
   "feature": "gloom:giant_glowshroom",
   "placement": [
-    { "type": "minecraft:biome" },
     { "type": "minecraft:count", "count": 2 },
     { "type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE" },
     {
@@ -16,11 +15,7 @@
           {
             "type": "minecraft:matching_blocks",
             "offset": [0, -1, 0],
-            "blocks": [
-              "minecraft:dirt",
-              "minecraft:grass_block",
-              "minecraft:stone"
-            ]
+            "blocks": ["minecraft:grass_block", "minecraft:dirt"]
           }
         ]
       }

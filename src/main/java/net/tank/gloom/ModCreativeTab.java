@@ -1,5 +1,6 @@
 package net.tank.gloom;
 import net.minecraft.core.registries.Registries;
+import net.tank.gloom.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +23,7 @@ public class ModCreativeTab {
                 output.accept(ModItems.GLOWSHROOM_CAP.get());
                 output.accept(ModItems.GLOWSHROOM_STALK.get());
                 output.accept(ModItems.GLOOM_IRON_ORE.get());
+                output.accept(ModItems.GLOWSHROOM_SPORE.get());
             })
             .build()
     );

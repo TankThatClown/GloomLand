@@ -1,4 +1,5 @@
-package net.tank.gloom;
+package net.tank.gloom.item;
+import net.tank.gloom.block.ModBlocks;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -31,10 +32,13 @@ public class ModItems {
                 .build()
         )));
     public static final RegistryObject<Item> GLOWSHROOM_CAP = ITEMS.register("glowshroom_cap",
-    ()-> new BlockItem(ModBlocks.GlOWSHROOM_CAP.get(), new Item.Properties()));
+    ()-> new BlockItem(ModBlocks.GLOWSHROOM_CAP.get(), new Item.Properties()));
 
      public static final RegistryObject<Item> GLOWSHROOM_STALK = ITEMS.register("glowshroom_stalk",
     ()-> new BlockItem(ModBlocks.GLOWSHROOM_STALK.get(), new Item.Properties()));
+
+     public static final RegistryObject<Item> GLOWSHROOM_SPORE = ITEMS.register("glowshroom_spore",
+    ()-> new BlockItem(ModBlocks.GLOWSHROOM_SPORE.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> GLOOM_IRON_ORE = ITEMS.register("gloom_iron_ore",
     ()-> new BlockItem(ModBlocks.GLOOM_IRON_ORE.get(),new Item.Properties()));
