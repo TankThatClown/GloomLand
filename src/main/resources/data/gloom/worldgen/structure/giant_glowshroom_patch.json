@@ -7,7 +7,7 @@
 
   "max_distance_from_center": 80,
 
-  "biomes": ["minecraft:plains"],
+  "biomes": ["gloom:gloom_plains"],
   "exclude_biomes": ["minecraft:ocean", "minecraft:deep_ocean", "minecraft:river"],
   "step": "surface_structures",
 

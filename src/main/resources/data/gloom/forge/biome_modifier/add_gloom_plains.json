@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": ["gloom:gloom_plains"],
+  "features": [
+    "gloom:placed_giant_glowshroom",
+    "minecraft:trees_plains"
+  ],
+  "step": "vegetal_decoration"
+}

@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:add_features",
-  "biomes": ["minecraft:plains"],
-  "features": [
-    "minecraft:spruce"
-  ]
-}

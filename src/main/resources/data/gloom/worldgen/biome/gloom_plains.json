@@ -1,0 +1,23 @@
+{
+  "temperature": 0.7,
+  "downfall": 0,
+  "has_precipitation": true,
+  "temperature_modifier": "none",
+  "creature_spawn_probability": 4,
+  "effects": {
+    "sky_color": 9902546,
+    "fog_color": 10102458,
+    "water_color": 1975230,
+    "water_fog_color": 2818303,
+    "grass_color": 9830650,
+    "foliage_color": 22015
+  },
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    "gloom:placed_giant_glowshroom",
+    "minecraft:spruce",
+    "minecraft:huge_red_mushroom"
+  ]
+}

@@ -2,12 +2,16 @@ package net.tank.gloom;
 import java.util.ArrayList;
 
 import com.mojang.logging.LogUtils;
+
 import net.tank.gloom.block.ModBlocks;
 import net.tank.gloom.item.ModItems;
+import net.tank.gloom.worldgen.biome.ModBiomes;
+import net.tank.gloom.worldgen.biome.ModTerrablender;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.SurfaceRuleData;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -38,6 +42,8 @@ import net.tank.gloom.block.ModBlocks;
 import java.util.ArrayList;
 
 import org.slf4j.Logger;
+
+import net.tank.gloom.worldgen.biome.surface.ModSurfaceRule;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(GloomMod.MODID)
 public class GloomMod
@@ -55,13 +61,12 @@ public class GloomMod
         //modEventBus.addListener(this::commonSetup);
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModTerrablender.registerBiomes();
         //Register the Deferred Register to the mod event bus so tabs get registered
         ModCreativeTab.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-       // context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     /*private void commonSetup(final FMLCommonSetupEvent event)
