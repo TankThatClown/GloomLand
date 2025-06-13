@@ -11,11 +11,13 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+
 import org.slf4j.Logger;
 
+import net.tank.gloom.GloomMod;
+
 public class ModItems {
-        public static final String MODID = "gloom";
-        public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+        public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GloomMod.MODID);
         public static final RegistryObject<Item> GLOOM_STONE_ITEM = ITEMS.register("gloom_stone", 
         () -> new BlockItem(ModBlocks.GLOOM_STONE.get(), new Item.Properties()));
         public static final RegistryObject<Item> GLOOM_DIRT_ITEM = ITEMS.register("gloom_dirt", 
@@ -42,17 +44,15 @@ public class ModItems {
 
     public static final RegistryObject<Item> GLOOM_IRON_ORE = ITEMS.register("gloom_iron_ore",
     ()-> new BlockItem(ModBlocks.GLOOM_IRON_ORE.get(),new Item.Properties()));
-         public static void register(IEventBus eventBus){
+         
+    public static final RegistryObject<Item> GLOWING_STICK = ITEMS.register("glowing_stick",
+    ()-> new Item(new Item.Properties()));
+    
+     public static final RegistryObject<Item> MUCK_BOMB = ITEMS.register("muck_bomb",
+    ()->new MuckBombItem(new Item.Properties())); 
+    
+    
+    public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
-    /*public static class GlowBlockItem extends BlockItem{
-        public GlowBlockItem(Block block,Properties properties){
-            super(block,properties);
-        }
-
-        @Override
-        public boolean isFoil(ItemStack pStack) {
-            return true;
-        }
-    }*/
 }

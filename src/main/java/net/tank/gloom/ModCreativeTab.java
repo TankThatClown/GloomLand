@@ -24,6 +24,8 @@ public class ModCreativeTab {
                 output.accept(ModItems.GLOWSHROOM_STALK.get());
                 output.accept(ModItems.GLOOM_IRON_ORE.get());
                 output.accept(ModItems.GLOWSHROOM_SPORE.get());
+                output.accept(ModItems.GLOWING_STICK.get());
+                output.accept(ModItems.MUCK_BOMB.get()); 
             })
             .build()
     );

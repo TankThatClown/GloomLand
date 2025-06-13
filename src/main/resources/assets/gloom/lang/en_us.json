@@ -6,5 +6,8 @@
     "block.gloom.glowshroom": "Glowshroom",
     "block.gloom.glowshroom_cap":"Glowshroom Cap",
     "block.gloom.glowshroom_stalk":"Glowshroom Stalk",
-    "block.gloom.glowshroom_spore":"Glowshroom Spore"
+    "block.gloom.glowshroom_spore":"Glowshroom Spore",
+    "block.gloom.gloom_iron_ore":"Gloom Iron Ore",
+    "item.gloom.glowing_stick":"Glowing Stick",
+    "item.gloom.muck_bomb":"Muck Bomb"
 }

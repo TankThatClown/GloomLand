@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "gloom:glowshroom_stalk"
+    }
+  ],
+  "result": {
+    "item": "gloom:glowing_stick",
+    "count": 4
+  }
+}

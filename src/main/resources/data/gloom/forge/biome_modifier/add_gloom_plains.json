@@ -3,7 +3,8 @@
   "biomes": ["gloom:gloom_plains"],
   "features": [
     "gloom:placed_giant_glowshroom",
-    "minecraft:trees_plains"
+    "minecraft:trees_plains",
+    "gloom:placed_gloom_iron_vein"
   ],
   "step": "vegetal_decoration"
 }

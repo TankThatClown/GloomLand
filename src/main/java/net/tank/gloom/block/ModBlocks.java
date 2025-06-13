@@ -19,8 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tank.gloom.GloomMod;
 public class ModBlocks{
-    public static final String MODID = "gloom";
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GloomMod.MODID);
     public static final RegistryObject<Block> GLOOM_STONE = BLOCKS.register("gloom_stone", 
     () -> new Block(BlockBehaviour.Properties.of()
         .mapColor(MapColor.STONE)

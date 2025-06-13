@@ -46,7 +46,7 @@
             },
             {
               "condition": "minecraft:random_chance",
-              "chance": 0.01
+              "chance": 0.2
             }
           ]
         }
@@ -57,7 +57,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:stick",
+          "name": "gloom:glowshroom_spore",
           "conditions": [
             {
               "condition": "minecraft:inverted",
