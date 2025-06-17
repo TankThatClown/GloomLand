@@ -1,15 +1,12 @@
 package net.tank.gloom.entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.tags.FluidTags;
-import net.minecraft.world.level.material.FluidState;
 import net.tank.gloom.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.tank.gloom.block.ModBlocks;
@@ -44,8 +41,8 @@ public class MuckBombEntity extends ThrowableItemProjectile{
         
         boolean canPlace= !(centerState.liquid()||
         aboveState.liquid()||
-        this.level().getFluidState(centerPos).is(FluidTags.WATER)||
-        this.level().getFluidState(centerPos).is(FluidTags.LAVA));
+        this.isInWater()||
+        this.isInLava());
         if(!this.level().isClientSide()) {
             this.level().explode(this, this.getX(), this.getY(), this.getZ(), 3.0f, Level.ExplosionInteraction.TNT);
             
