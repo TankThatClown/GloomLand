@@ -3,15 +3,10 @@
   "pools": [
     {
       "rolls": 1,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gloom:gloom_dirt"
+          "name": "gloom:dusk_lily"
         }
       ]
     }

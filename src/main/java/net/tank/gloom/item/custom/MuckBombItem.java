@@ -1,14 +1,14 @@
-package net.tank.gloom.item;
+package net.tank.gloom.item.custom;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.stats.Stats;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ThrowableProjectile;
 import net.minecraft.world.entity.projectile.Snowball;
-import net.tank.gloom.entity.MuckBombEntity;
+import net.tank.gloom.entity.custom.MuckBombEntity;
+import net.minecraft.stats.Stats;
 public class MuckBombItem extends Item {
     public MuckBombItem(Properties pProperties) {
         super(pProperties);

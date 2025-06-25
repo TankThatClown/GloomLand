@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 import com.mojang.logging.LogUtils;
 
-import net.tank.gloom.block.ModBlocks;
-import net.tank.gloom.item.ModItems;
+import net.tank.gloom.block.*;
+import net.tank.gloom.item.*;
 import net.tank.gloom.worldgen.biome.ModBiomes;
 import net.tank.gloom.worldgen.biome.ModTerrablender;
 import net.minecraft.client.Minecraft;
@@ -31,8 +31,11 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -41,13 +44,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import terrablender.api.SurfaceRuleManager;
-import net.tank.gloom.block.ModBlocks;
-
 import java.util.ArrayList;
-
 import org.slf4j.Logger;
-
-import net.tank.gloom.entity.ModEntities;
+import net.tank.gloom.entity.*;
+import net.tank.gloom.entity.client.*;
+import net.tank.gloom.entity.custom.*;
 import net.tank.gloom.worldgen.biome.surface.ModSurfaceRule;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(GloomMod.MODID)
@@ -65,7 +66,11 @@ public class GloomMod
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         ModBlocks.register(modEventBus);
+        ModOreBlocks.register(modEventBus);
+        ModPlantBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlockItems.register(modEventBus);
+        ModFoodItems.register(modEventBus);
         ModEntities.register(modEventBus);
         ModTerrablender.registerBiomes();
         //Register the Deferred Register to the mod event bus so tabs get registered
@@ -92,7 +97,6 @@ public class GloomMod
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
-
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
@@ -107,6 +111,15 @@ public class GloomMod
                  ItemBlockRenderTypes.setRenderLayer(blockObject.get(), RenderType.cutout());
             }
             EntityRenderers.register(ModEntities.MUCK_BOMB_ENTITY.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.GLOW_TOAD_ENTITY.get(), GlowToadRenderer::new);
         }
+        @SubscribeEvent
+            public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+            event.registerLayerDefinition(ModModelLayer.GLOW_TOAD_LAYER, GlowToadModel::createBodyLayer);
+            }
+         @SubscribeEvent
+        public static void registerAttributes(EntityAttributeCreationEvent event) {
+        event.put(ModEntities.GLOW_TOAD_ENTITY.get(), GlowToadEntity.createAttributes().build());
+        }   
     }
 }

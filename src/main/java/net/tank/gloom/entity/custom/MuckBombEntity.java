@@ -1,4 +1,5 @@
-package net.tank.gloom.entity;
+package net.tank.gloom.entity.custom;
+import net.tank.gloom.entity.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -9,7 +10,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.BlockHitResult;
 import net.tank.gloom.item.ModItems;
 import net.minecraft.core.BlockPos;
-import net.tank.gloom.block.ModBlocks;
+import net.tank.gloom.block.*;
 public class MuckBombEntity extends ThrowableItemProjectile{
     public MuckBombEntity(EntityType<? extends ThrowableItemProjectile> type, Level world) {
         super(type, world);
@@ -31,7 +32,7 @@ public class MuckBombEntity extends ThrowableItemProjectile{
         int startX=(int)this.getX()-2;
         int endX=(int)this.getX()+2;
         int startY = (int)(this.getY());
-        int endY = (int)(this.getY())-3;
+        int endY = (int)(this.getY())-2;
         int startZ = (int)(this.getZ() - 2);
         int endZ = (int)(this.getZ() + 2);
         
@@ -54,7 +55,7 @@ public class MuckBombEntity extends ThrowableItemProjectile{
                         BlockPos pos = new BlockPos(xPos, yPos, zPos);
                         BlockState state = this.level().getBlockState(pos);
                         if (!(this.level().isEmptyBlock(pos)||state.liquid()||state.is(Blocks.BEDROCK))) {
-                            this.level().setBlock(pos, ModBlocks.GLOWSHROOM_CAP.get().defaultBlockState(), 3);
+                            this.level().setBlock(pos, ModBlocks.MUCK_BLOCK.get().defaultBlockState(), 3);
                          }
                     }
                 }

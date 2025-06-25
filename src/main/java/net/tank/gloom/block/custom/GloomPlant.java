@@ -1,8 +1,9 @@
-package net.tank.gloom.block;
+package net.tank.gloom.block.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.tank.gloom.block.ModBlocks;
 public  class GloomPlant extends BushBlock{
         public GloomPlant(Properties properties) {
             super(properties);

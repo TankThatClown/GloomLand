@@ -1,5 +1,5 @@
 {
-  "temperature": 0.7,
+  "temperature": 0.5,
   "downfall": 0,
   "has_precipitation": true,
   "temperature_modifier": "none",
@@ -16,8 +16,5 @@
   "spawn_costs": {},
   "carvers": {},
   "features": [
-    "gloom:placed_giant_glowshroom",
-    "minecraft:spruce",
-    "minecraft:huge_red_mushroom"
   ]
 }

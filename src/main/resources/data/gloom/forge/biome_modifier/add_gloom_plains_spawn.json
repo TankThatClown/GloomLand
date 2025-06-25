@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_spawns", 
+  "biomes": ["gloom:gloom_plains"], 
+  "spawners":
+  {
+    "type": "gloom:glow_toad", 
+    "weight": 100, 
+    "minCount": 1, 
+    "maxCount": 4 
+  }
+}

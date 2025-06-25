@@ -1,6 +1,7 @@
 {
     "values":[
          "gloom:gloom_stone",
-         "gloom:gloom_iron_ore"
+         "gloom:gloom_iron_ore",
+         "gloom:muck_block"
     ]
 }
