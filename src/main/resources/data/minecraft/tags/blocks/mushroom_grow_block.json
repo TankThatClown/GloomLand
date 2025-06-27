@@ -1,10 +1,6 @@
 {
     "values":[
         "gloom:gloom_dirt",
-        "gloom:gloom_grass",
-        "minecraft:dirt",
-        "minecraft:grass_block",
-        "minecraft:mycelium",
-        "minecraft:podzol"
+        "gloom:gloom_grass"
     ]
 }
