@@ -1,5 +1,5 @@
 {
-    "block.gloom.gloom_stone": "Gloomstone",
+    "block.gloom.gloomstone": "Gloomstone",
     "block.gloom.gloom_dirt": "Gloom Dirt",
     "itemGroup.gloom_tab":"Gloomland",
     "block.gloom.gloom_grass": "Gloom Grass",
@@ -10,5 +10,6 @@
     "block.gloom.gloom_iron_ore":"Gloom Iron Ore",
     "item.gloom.glowing_stick":"Glowing Stick",
     "item.gloom.muck_bomb":"Muck Bomb",
-    "block.gloom.dusk_lily":"Dusk Lily"
+    "block.gloom.dusk_lily":"Dusk Lily",
+    "block.gloom.muck_block": "Muck Block"
 }

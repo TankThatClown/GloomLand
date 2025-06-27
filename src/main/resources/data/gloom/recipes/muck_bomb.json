@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " M ",
+    "GTG",
+    "GMG"
+  ],
+  "key": {
+    "G": {
+      "item": "gloom:gloomstone"
+    },
+    "T": {
+      "item": "minecraft:tnt"
+    },
+    "M": {
+      "item": "gloom:muck_block"
+    }
+  },
+  "result": {
+    "item": "gloom:muck_bomb",
+    "count": 1
+  }
+}

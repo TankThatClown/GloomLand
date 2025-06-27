@@ -23,7 +23,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.tank.gloom.GloomMod;
 public class ModBlocks{
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GloomMod.MODID);
-    public static final RegistryObject<Block> GLOOM_STONE = BLOCKS.register("gloom_stone", 
+    public static final RegistryObject<Block> GLOOMSTONE = BLOCKS.register("gloomstone",
     () -> new Block(BlockBehaviour.Properties.of()
         .mapColor(MapColor.STONE)
         .strength(2.5f,7.0f)
@@ -34,7 +34,7 @@ public class ModBlocks{
     () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
      public static final RegistryObject<Block> GLOOM_GRASS = BLOCKS.register("gloom_grass", 
-    () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
+    () -> new GloomGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
 
     public static final RegistryObject<Block> MUCK_BLOCK = BLOCKS.register("muck_block", 
     () -> new EffectBlock(BlockBehaviour.Properties.of()

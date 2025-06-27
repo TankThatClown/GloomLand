@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.Blocks;
 public class ModSurfaceRule {
     private static final SurfaceRules.RuleSource GLOOM_DIRT=makeStateRule(ModBlocks.GLOOM_DIRT.get());
     private static final SurfaceRules.RuleSource GLOOM_GRASS=makeStateRule(ModBlocks.GLOOM_GRASS.get());
-    private static final SurfaceRules.RuleSource GLOOM_STONE=makeStateRule(ModBlocks.GLOOM_STONE.get());
+    private static final SurfaceRules.RuleSource GLOOM_STONE=makeStateRule(ModBlocks.GLOOMSTONE.get());
     private static final SurfaceRules.RuleSource DIRT = makeStateRule(Blocks.DIRT);
     private static final SurfaceRules.RuleSource GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
     public static SurfaceRules.RuleSource makeRules()

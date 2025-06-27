@@ -18,7 +18,7 @@ public class ModCreativeTab {
             .title(Component.translatable("itemGroup.gloom_tab")) // Your tab's display name
             .icon(() -> new ItemStack(ModBlockItems.MUCK_BLOCK.get()))
             .displayItems((itemDisplayParameters,output)->{
-                output.accept(ModBlockItems.GLOOM_STONE.get());
+                output.accept(ModBlockItems.GLOOMSTONE.get());
                 output.accept(ModBlockItems.GLOOM_DIRT.get());
                 output.accept(ModBlockItems.GLOOM_GRASS.get());
                 output.accept(ModBlockItems.MUCK_BLOCK.get());

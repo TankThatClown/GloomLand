@@ -29,12 +29,12 @@ public class MuckBombEntity extends ThrowableItemProjectile{
 
     @Override
     protected void onHitBlock(BlockHitResult pResult) {
-        int startX=(int)this.getX()-2;
-        int endX=(int)this.getX()+2;
+        int startX=(int)this.getX()-1;
+        int endX=(int)this.getX()+1;
         int startY = (int)(this.getY());
         int endY = (int)(this.getY())-2;
-        int startZ = (int)(this.getZ() - 2);
-        int endZ = (int)(this.getZ() + 2);
+        int startZ = (int)(this.getZ() - 1);
+        int endZ = (int)(this.getZ() + 1);
         
         BlockPos centerPos = new BlockPos((int)this.getX(),(int)this.getY(),(int)this.getZ());
         BlockState centerState = this.level().getBlockState(centerPos);

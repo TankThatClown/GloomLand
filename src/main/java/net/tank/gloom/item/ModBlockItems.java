@@ -16,8 +16,8 @@ import net.tank.gloom.GloomMod;
 import net.tank.gloom.block.*;
 public class ModBlockItems {
             public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GloomMod.MODID);
-            public static final RegistryObject<Item> GLOOM_STONE =BLOCK_ITEMS.register("gloom_stone", 
-        () -> new BlockItem(ModBlocks.GLOOM_STONE.get(), new Item.Properties()));
+            public static final RegistryObject<Item> GLOOMSTONE =BLOCK_ITEMS.register("gloomstone",
+        () -> new BlockItem(ModBlocks.GLOOMSTONE.get(), new Item.Properties()));
         public static final RegistryObject<Item> GLOOM_DIRT = BLOCK_ITEMS.register("gloom_dirt", 
         () -> new BlockItem(ModBlocks.GLOOM_DIRT.get(), new Item.Properties()));
         public static final RegistryObject<Item> GLOOM_GRASS= BLOCK_ITEMS.register("gloom_grass", 
