@@ -58,17 +58,17 @@ public class GlowToadModel<T extends Entity> extends  HierarchicalModel<T> {
 
 		PartDefinition body = frog.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -11.0F, -8.0F, 16.0F, 9.0F, 12.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.0F, -10.0F, 13.0F));
 
-		PartDefinition right_hind = frog.addOrReplaceChild("right_hind", CubeListBuilder.create().texOffs(54, 54).addBox(-4.0F, 0.0F, -2.0F, 4.0F, 4.0F, 4.0F, new CubeDeformation(0.0F))
-		.texOffs(52, 27).addBox(-4.0F, 4.0F, -2.0F, 4.0F, 1.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(11.0F, -14.0F, 6.0F));
+		PartDefinition right_hind = frog.addOrReplaceChild("right_hind", CubeListBuilder.create().texOffs(55, 55).addBox(-4.0F, 0.0F, -2.0F, 4.0F, 4.0F, 3.0F, new CubeDeformation(0.0F))
+				.texOffs(53, 28).addBox(-4.0F, 4.0F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(11.0F, -14.0F, 8.0F));
 
-		PartDefinition right_leg = frog.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(52, 33).addBox(-4.0F, 0.0F, -2.0F, 4.0F, 4.0F, 4.0F, new CubeDeformation(0.0F))
-		.texOffs(36, 44).addBox(-4.0F, 4.0F, -2.0F, 4.0F, 1.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(11.0F, -14.0F, 14.0F));
+		PartDefinition right_leg = frog.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(53, 34).addBox(-4.0F, 0.0F, -3.0F, 4.0F, 4.0F, 3.0F, new CubeDeformation(0.0F))
+				.texOffs(37, 45).addBox(-4.0F, 4.0F, -3.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(11.0F, -14.0F, 15.0F));
 
-		PartDefinition left_hind = frog.addOrReplaceChild("left_hind", CubeListBuilder.create().texOffs(36, 50).addBox(-7.0F, -2.0F, 1.0F, 4.0F, 1.0F, 5.0F, new CubeDeformation(0.0F))
-		.texOffs(54, 40).addBox(-6.9F, -6.0F, 1.0F, 4.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -8.0F, 3.0F));
+		PartDefinition left_hind = frog.addOrReplaceChild("left_hind", CubeListBuilder.create().texOffs(37, 51).addBox(-7.0F, -2.0F, 1.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F))
+				.texOffs(55, 41).addBox(-6.9F, -6.0F, 1.0F, 4.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -8.0F, 5.0F));
 
-		PartDefinition left_leg = frog.addOrReplaceChild("left_leg", CubeListBuilder.create().texOffs(52, 21).addBox(-9.0F, -1.0F, 1.0F, 4.0F, 1.0F, 5.0F, new CubeDeformation(0.0F))
-		.texOffs(54, 47).addBox(-9.0F, -5.0F, 1.0F, 4.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(2.0F, -9.0F, 11.0F));
+		PartDefinition left_leg = frog.addOrReplaceChild("left_leg", CubeListBuilder.create().texOffs(53, 22).addBox(-9.0F, -1.0F, 0.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F))
+				.texOffs(55, 48).addBox(-9.0F, -5.0F, 0.0F, 4.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offset(2.0F, -9.0F, 12.0F));
 
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}

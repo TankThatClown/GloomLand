@@ -30,6 +30,7 @@ public class ModCreativeTab {
                 output.accept(ModItems.GLOWING_STICK.get());
                 output.accept(ModItems.MUCK_BOMB.get()); 
                 output.accept(ModBlockItems.DUSK_LILY.get());
+                output.accept(ModSpawnEggItems.GLOW_TOAD_SPAWN_EGG.get());
             })
             .build()
     );

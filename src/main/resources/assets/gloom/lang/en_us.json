@@ -11,5 +11,7 @@
     "item.gloom.glowing_stick":"Glowing Stick",
     "item.gloom.muck_bomb":"Muck Bomb",
     "block.gloom.dusk_lily":"Dusk Lily",
-    "block.gloom.muck_block": "Muck Block"
+    "block.gloom.muck_block": "Muck Block",
+    "item.gloom.glow_toad_spawn_egg": "Glow Toad Spawn Egg",
+    "entity.gloom.glow_toad": "Glow Toad"
 }

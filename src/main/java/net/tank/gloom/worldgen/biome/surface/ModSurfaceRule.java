@@ -22,8 +22,9 @@ public class ModSurfaceRule {
     // Rule block only applied if biome == GLOOM_PLAINS
     SurfaceRules.RuleSource gloomRules = SurfaceRules.sequence(
         SurfaceRules.ifTrue(isAbove60,
-            SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR,
-            GLOOM_GRASS)
+            SurfaceRules.ifTrue(isAboveWater
+            ,SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR,
+            GLOOM_GRASS))
             ), 
         SurfaceRules.ifTrue(isAbove60,
             SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, 

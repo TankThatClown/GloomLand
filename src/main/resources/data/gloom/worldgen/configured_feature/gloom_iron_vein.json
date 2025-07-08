@@ -5,7 +5,7 @@
       {
         "target": {
           "predicate_type": "minecraft:block_match",
-          "block": "gloom:gloom_stone"
+          "block": "gloom:gloomstone"
         },
         "state": {
           "Name": "gloom:gloom_iron_ore"
