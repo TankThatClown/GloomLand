@@ -1,5 +1,6 @@
 {
   "temperature": 0.5,
+  "category": "plains",
   "downfall": 0,
   "has_precipitation": true,
   "temperature_modifier": "none",
@@ -16,5 +17,6 @@
   "spawn_costs": {},
   "carvers": {},
   "features": [
+
   ]
 }

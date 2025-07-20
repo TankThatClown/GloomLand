@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "misc",
   "pattern": [
     " M ",
-    "GTG",
-    "GMG"
+    "STS",
+    "SMS"
   ],
   "key": {
-    "G": {
-      "item": "gloom:gloomstone"
+    "S": {
+      "tag": "gloom:stone_replaceables"
     },
     "T": {
       "item": "minecraft:tnt"

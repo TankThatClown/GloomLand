@@ -1,26 +1,27 @@
 {
-  "feature": "gloom:gloom_iron_vein",
+  "feature": "minecraft:ore_redstone",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 10
+      "count": 4
     },
     {
-      "type": "minecraft:biome"
-    },{
       "type": "minecraft:in_square"
     },
     {
       "type": "minecraft:height_range",
       "height": {
-        "type": "minecraft:trapezoid",
+        "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 56
+          "absolute": 15
         },
         "min_inclusive": {
-          "absolute": -24
+          "above_bottom": 0
         }
       }
+    },
+    {
+      "type": "minecraft:biome"
     }
   ]
 }

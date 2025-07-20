@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "gloom:item/dusk_lily"
-  }
+  },
+  "render_type": "minecraft:cutout"
 }

@@ -35,7 +35,6 @@ import net.tank.gloom.worldgen.biome.surface.ModSurfaceRule;
 public class GloomMod
 {
     public static final String MODID = "gloom";
-    public static final ArrayList <RegistryObject<Block>> transparentBlock = new ArrayList<>(); 
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -88,9 +87,6 @@ public class GloomMod
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-            for(RegistryObject<Block> blockObject: transparentBlock){
-                 ItemBlockRenderTypes.setRenderLayer(blockObject.get(), RenderType.cutout());
-            }
             EntityRenderers.register(ModEntities.MUCK_BOMB_ENTITY.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.GLOW_TOAD_ENTITY.get(), GlowToadRenderer::new);
         }

@@ -5,6 +5,6 @@ import terrablender.api.Regions;
 
 public class ModTerrablender {
     public static void registerBiomes() {
-        Regions.register(new ModOverworldRegion(new ResourceLocation("gloom", "overworld"), 5));
+        Regions.register(new ModOverworldRegion(new ResourceLocation("gloom", "overworld"), 2));
     }
 }

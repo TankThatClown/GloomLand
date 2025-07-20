@@ -1,26 +1,27 @@
 {
-  "feature": "gloom:gloom_iron_vein",
+  "feature": "minecraft:ore_coal",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 10
+      "count": 30
     },
     {
-      "type": "minecraft:biome"
-    },{
       "type": "minecraft:in_square"
     },
     {
       "type": "minecraft:height_range",
       "height": {
-        "type": "minecraft:trapezoid",
+        "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 56
+          "below_top": 0
         },
         "min_inclusive": {
-          "absolute": -24
+          "absolute": -64
         }
       }
+    },
+    {
+      "type": "minecraft:biome"
     }
   ]
 }

@@ -18,18 +18,26 @@ public class ModCreativeTab {
             .title(Component.translatable("itemGroup.gloom_tab")) // Your tab's display name
             .icon(() -> new ItemStack(ModBlockItems.MUCK_BLOCK.get()))
             .displayItems((itemDisplayParameters,output)->{
+                // Blocks
                 output.accept(ModBlockItems.GLOOMSTONE.get());
                 output.accept(ModBlockItems.GLOOM_DIRT.get());
                 output.accept(ModBlockItems.GLOOM_GRASS.get());
                 output.accept(ModBlockItems.MUCK_BLOCK.get());
-                output.accept(ModFoodItems.GLOWSHROOM.get());
                 output.accept(ModBlockItems.GLOWSHROOM_CAP.get());
                 output.accept(ModBlockItems.GLOWSHROOM_STALK.get());
                 output.accept(ModBlockItems.GLOOM_IRON_ORE.get());
+                output.accept(ModBlockItems.GLOOM_GOLD_ORE.get());
                 output.accept(ModBlockItems.GLOWSHROOM_SPORE.get());
-                output.accept(ModItems.GLOWING_STICK.get());
-                output.accept(ModItems.MUCK_BOMB.get()); 
                 output.accept(ModBlockItems.DUSK_LILY.get());
+
+                // Items
+                output.accept(ModItems.GLOWING_STICK.get());
+                output.accept(ModItems.MUCK_BOMB.get());
+                output.accept(ModItems.MINER_WISH.get());
+                // Food
+                output.accept(ModFoodItems.GLOWSHROOM.get());
+
+                // Spawn Eggs
                 output.accept(ModSpawnEggItems.GLOW_TOAD_SPAWN_EGG.get());
             })
             .build()

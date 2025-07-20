@@ -69,7 +69,10 @@ public GlowToadEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
     public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
         return ModEntities.GLOW_TOAD_ENTITY.get().create(pLevel);
     }
-
+    @Override
+    protected SoundEvent getAmbientSound(){
+        return SoundEvents.FROG_AMBIENT;
+    }
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {

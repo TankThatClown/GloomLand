@@ -24,6 +24,9 @@ public class ModOreBlocks {
           public static final RegistryObject<Block> GLOOM_IRON_ORE = ORE_BLOCKS.register("gloom_iron_ore",
     ()-> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
 
+    public static final RegistryObject<Block> GLOOM_GOLD_ORE = ORE_BLOCKS.register("gloom_gold_ore",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_ORE)));
+
      public static void register(IEventBus eventBus){
         ORE_BLOCKS.register(eventBus);
     }

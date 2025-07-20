@@ -24,9 +24,12 @@ public class ModItems {
     ()-> new Item(new Item.Properties()));
     
      public static final RegistryObject<Item> MUCK_BOMB = ITEMS.register("muck_bomb",
-    ()->new MuckBombItem(new Item.Properties())); 
-    
-    
+    ()->new MuckBombItem(new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> MINER_WISH = ITEMS.register("miner_wish",
+            ()->new MinerWishItem(new Item.Properties().stacksTo(16)));
+
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

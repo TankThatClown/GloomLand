@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC",
+    "III",
+    "GGG"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "C": {
+      "item": "minecraft:coal_block"
+    }
+  },
+  "result": {
+    "item": "gloom:miner_wish",
+    "count": 2
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:stone",
+    "minecraft:cobblestone",
+    "minecraft:dirt",
+    "minecraft:grass_block",
+    "minecraft:deepslate",
+    "minecraft:tuff",
+    "minecraft:granite",
+    "minecraft:sand",
+    "minecraft:gravel",
+    "minecraft:andesite",
+    "minecraft:diorite",
+    "minecraft:water",
+
+    "minecraft:netherrack",
+    "minecraft:soul_sand",
+    "minecraft:soul_soil",
+    "minecraft:basalt",
+    "minecraft:lava",
+
+    "gloom:gloom_grass",
+    "gloom:gloom_dirt",
+    "gloom:gloomstone"
+  ]
+}

@@ -2,6 +2,7 @@
     "values":[
          "gloom:gloomstone",
          "gloom:gloom_iron_ore",
+          "gloom:gloom_gold_ore",
          "gloom:muck_block"
     ]
 }

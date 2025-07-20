@@ -61,10 +61,6 @@ public class ModPlantBlocks {
     .sound(SoundType.GRASS)
     .noCollission()
     .lightLevel(state->16)));
-    static{
-            GloomMod.transparentBlock.add(GLOWSHROOM);
-            GloomMod.transparentBlock.add(DUSK_LILY);
-    }
      public static void register(IEventBus eventBus){
         PLANT_BLOCKS.register(eventBus);
     }

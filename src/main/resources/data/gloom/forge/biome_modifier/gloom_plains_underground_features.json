@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_features",
+  "biomes": ["gloom:gloom_plains"],
+  "features": [
+    "gloom:placed_muck_vein",
+    "gloom:placed_coal_vein",
+    "gloom:placed_iron_vein",
+    "gloom:placed_gold_vein",
+    "gloom:placed_redstone_vein",
+    "gloom:placed_lapis_vein",
+    "gloom:placed_diamond_vein"
+  ],
+  "step": "underground_ores"
+}

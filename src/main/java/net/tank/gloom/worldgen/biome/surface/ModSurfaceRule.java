@@ -1,5 +1,6 @@
 package net.tank.gloom.worldgen.biome.surface;
 import net.tank.gloom.block.*;
+import java.util.Random;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
@@ -17,21 +18,18 @@ public class ModSurfaceRule {
         SurfaceRules.ConditionSource isGloomPlains = SurfaceRules.isBiome(ModBiomes.GLOOM_PLAINS);
     SurfaceRules.ConditionSource isAboveWater = SurfaceRules.waterBlockCheck(-1, 0);
     SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAboveWater, GRASS_BLOCK), DIRT);
-    SurfaceRules.ConditionSource isAbove60 = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(60), 0);
-    SurfaceRules.ConditionSource isAboveBottom = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(-63), 0);
-    // Rule block only applied if biome == GLOOM_PLAINS
+    SurfaceRules.ConditionSource isAbove50 = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(50), 0);
     SurfaceRules.RuleSource gloomRules = SurfaceRules.sequence(
-        SurfaceRules.ifTrue(isAbove60,
+        SurfaceRules.ifTrue(isAbove50,
             SurfaceRules.ifTrue(isAboveWater
             ,SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR,
             GLOOM_GRASS))
-            ), 
-        SurfaceRules.ifTrue(isAbove60,
+            ),
+        SurfaceRules.ifTrue(isAbove50,
             SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, 
             GLOOM_DIRT)
-            ),
-        SurfaceRules.ifTrue(isAboveBottom,GLOOM_STONE)
-        );
+            )
+    );
 
     return SurfaceRules.sequence(
         SurfaceRules.ifTrue(isGloomPlains, gloomRules)
