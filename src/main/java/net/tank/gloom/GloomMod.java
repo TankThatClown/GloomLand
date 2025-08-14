@@ -50,6 +50,7 @@ public class GloomMod
         ModItems.register(modEventBus);
         ModBlockItems.register(modEventBus);
         ModFoodItems.register(modEventBus);
+        ModMobDropItems.register(modEventBus);
         ModEntities.register(modEventBus);
         ModSpawnEggItems.register(modEventBus);
         ModTerrablender.registerBiomes();
@@ -76,27 +77,5 @@ public class GloomMod
     {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
-    }
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-            EntityRenderers.register(ModEntities.MUCK_BOMB_ENTITY.get(), ThrownItemRenderer::new);
-            EntityRenderers.register(ModEntities.GLOW_TOAD_ENTITY.get(), GlowToadRenderer::new);
-        }
-        @SubscribeEvent
-            public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-            event.registerLayerDefinition(ModModelLayer.GLOW_TOAD_LAYER, GlowToadModel::createBodyLayer);
-            }
-         @SubscribeEvent
-        public static void registerAttributes(EntityAttributeCreationEvent event) {
-        event.put(ModEntities.GLOW_TOAD_ENTITY.get(), GlowToadEntity.createAttributes().build());
-        }   
     }
 }

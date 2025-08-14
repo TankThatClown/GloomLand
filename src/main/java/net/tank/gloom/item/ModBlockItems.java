@@ -40,6 +40,17 @@ public class ModBlockItems {
       public static final RegistryObject<Item> DUSK_LILY = BLOCK_ITEMS.register("dusk_lily",
     ()-> new BlockItem(ModPlantBlocks.DUSK_LILY.get(),new Item.Properties()));
 
+    public static final RegistryObject<Item> SHADOWBERRY_BUSH = BLOCK_ITEMS.register("shadowberry_bush",
+            ()-> new BlockItem(ModPlantBlocks.SHADOWBERRY_BUSH.get(),new Item.Properties()));
+
+    public static final RegistryObject<Item> BARE_SHADOWBERRY_BUSH = BLOCK_ITEMS.register("bare_shadowberry_bush",
+            ()-> new BareBushItem(ModPlantBlocks.SHADOWBERRY_BUSH.get(),new Item.Properties()){
+                @Override
+                public String getDescriptionId() {
+                    return "item.gloom.bare_shadowberry_bush";
+                }
+            });
+
       public static final RegistryObject<Item> MUCK_BLOCK = BLOCK_ITEMS.register("muck_block",
     ()-> new BlockItem(ModBlocks.MUCK_BLOCK.get(),new Item.Properties()));
 

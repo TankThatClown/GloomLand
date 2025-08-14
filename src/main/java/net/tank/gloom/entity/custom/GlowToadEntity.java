@@ -23,7 +23,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.core.BlockPos;
 
-import net.tank.gloom.entity.ai.ModJumpGoal;
+import net.tank.gloom.entity.ai.*;
 import org.jetbrains.annotations.Nullable;
 
 import net.tank.gloom.item.ModFoodItems;
@@ -91,6 +91,7 @@ public GlowToadEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
                 .add(Attributes.FOLLOW_RANGE, 20D)
                 .add(Attributes.MOVEMENT_SPEED, 0.25D);
     }
+
     @Override
 public boolean checkSpawnRules(LevelAccessor world, MobSpawnType spawnReason) {
     BlockPos pos = this.blockPosition();
@@ -104,7 +105,7 @@ public boolean checkSpawnRules(LevelAccessor world, MobSpawnType spawnReason) {
         this.goalSelector.addGoal(2, new BreedGoal(this, 1.15D));
         this.goalSelector.addGoal(3, new TemptGoal(this, 1.2D, Ingredient.of(ModFoodItems.GLOWSHROOM.get()), false));
         this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.1D));
-        this.goalSelector.addGoal(5,new ModJumpGoal(this,0.8D,2.0D));
+        this.goalSelector.addGoal(5,new ModLeapGoal(this,0.8D,2.0D));
         this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1.1D));
         this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 3f));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));

@@ -27,6 +27,15 @@ public class ModFoodItems {
                 .build()
         )));
 
+    public static final RegistryObject<Item> SHADOWBERRY = FOOD_ITEMS.register("shadowberry",
+            ()->new Item(new Item.Properties()
+                            .food(new FoodProperties.Builder()
+                                    .nutrition(2)
+                                    .saturationMod(0.4f)
+                                    .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 100, 0), 1.0F) // effect and chance
+                                    .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0), 1.0F) // effect and chance
+                                    .build()
+                            )));
          public static void register(IEventBus eventBus){
         FOOD_ITEMS.register(eventBus);
     }

@@ -17,7 +17,7 @@ public class ModEntities {
 
      public static final RegistryObject<EntityType<GlowToadEntity>> GLOW_TOAD_ENTITY =
             ENTITY_TYPES.register("glow_toad", () -> EntityType.Builder.of(GlowToadEntity::new, MobCategory.CREATURE)
-                    .sized(1.2f, 1.2f).build("glow_toad"));
+                    .sized(0.9f, 1.0f).build("glow_toad"));
     
 
     public static void register(IEventBus eventBus) {

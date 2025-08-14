@@ -6,15 +6,24 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gloom:glowshroom_cap",
+          "name": "gloom:shadowberry_bush",
           "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "gloom:shadowberry_bush",
+              "properties": {
+                "age": "1"
+              }
+            },
             {
               "condition": "minecraft:match_tool",
               "predicate": {
                 "enchantments": [
                   {
                     "enchantment": "minecraft:silk_touch",
-                    "levels": { "min": 1 }
+                    "levels": {
+                      "min": 1
+                    }
                   }
                 ]
               }
@@ -28,62 +37,29 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gloom:glowshroom",
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "enchantments": [
-                    {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": { "min": 1 }
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "condition": "minecraft:survives_explosion"
-            },
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.2
-            }
-          ]
+          "name": "gloom:bare_shadowberry_bush"
         }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
+      ],
+      "conditions": [
         {
-          "type": "minecraft:item",
-          "name": "gloom:glowshroom_spore",
-          "conditions": [
-            {
-              "condition": "minecraft:inverted",
-              "term": {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "enchantments": [
-                    {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": { "min": 1 }
-                    }
-                  ]
+          "condition": "minecraft:block_state_property",
+          "block": "gloom:shadowberry_bush",
+          "properties": {
+            "age": "0"
+          }
+        },
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "enchantments": [
+              {
+                "enchantment": "minecraft:silk_touch",
+                "levels": {
+                  "min": 1
                 }
               }
-            },
-            {
-              "condition": "minecraft:survives_explosion"
-            },
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.1
-            }
-          ]
+            ]
+          }
         }
       ]
     }

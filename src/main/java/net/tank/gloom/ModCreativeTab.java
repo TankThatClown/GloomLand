@@ -29,6 +29,8 @@ public class ModCreativeTab {
                 output.accept(ModBlockItems.GLOOM_GOLD_ORE.get());
                 output.accept(ModBlockItems.GLOWSHROOM_SPORE.get());
                 output.accept(ModBlockItems.DUSK_LILY.get());
+                output.accept(ModBlockItems.SHADOWBERRY_BUSH.get());
+                output.accept(ModBlockItems.BARE_SHADOWBERRY_BUSH.get());
 
                 // Items
                 output.accept(ModItems.GLOWING_STICK.get());
@@ -36,7 +38,9 @@ public class ModCreativeTab {
                 output.accept(ModItems.MINER_WISH.get());
                 // Food
                 output.accept(ModFoodItems.GLOWSHROOM.get());
-
+                output.accept(ModFoodItems.SHADOWBERRY.get());
+                //Mob Drops
+                output.accept(ModMobDropItems.TOAD_HIDE.get());
                 // Spawn Eggs
                 output.accept(ModSpawnEggItems.GLOW_TOAD_SPAWN_EGG.get());
             })

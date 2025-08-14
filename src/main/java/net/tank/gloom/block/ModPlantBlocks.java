@@ -19,6 +19,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tank.gloom.GloomMod;
+import net.tank.gloom.item.ModBlockItems;
+import net.tank.gloom.item.ModFoodItems;
+
 public class ModPlantBlocks {
      public static final DeferredRegister<Block> PLANT_BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GloomMod.MODID);
       public static final RegistryObject<Block> GLOWSHROOM = PLANT_BLOCKS.register("glowshroom",
@@ -61,6 +64,17 @@ public class ModPlantBlocks {
     .sound(SoundType.GRASS)
     .noCollission()
     .lightLevel(state->16)));
+
+    public static final RegistryObject<Block> SHADOWBERRY_BUSH = PLANT_BLOCKS.register("shadowberry_bush",
+            ()-> new GloomBushBlock(ModFoodItems.SHADOWBERRY,
+                    BlockBehaviour.Properties.of()
+                            .strength(0.2f,0.1f)
+                            .noOcclusion()
+                            .mapColor(MapColor.COLOR_LIGHT_GREEN)
+                            .sound(SoundType.GRASS)
+                            .randomTicks()
+                    ));
+
      public static void register(IEventBus eventBus){
         PLANT_BLOCKS.register(eventBus);
     }

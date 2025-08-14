@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "age=0": { "model": "gloom:block/shadowberry_bush_base" },
+    "age=1": { "model": "gloom:block/shadowberry_bush" }
+  }
+}
