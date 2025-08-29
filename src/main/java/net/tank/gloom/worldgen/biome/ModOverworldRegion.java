@@ -19,15 +19,25 @@ public class ModOverworldRegion extends Region {
 
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
-        final Climate.Parameter temperature = Climate.Parameter.span(0.55F, 0.8F);      // temperature
-        final Climate.Parameter humidity = Climate.Parameter.span(0.3F, 0.6F);          // humidity
-        final Climate.Parameter continentalness = Climate.Parameter.span(0.4F, 0.6F);  // continentalness
-        final Climate.Parameter erosion = Climate.Parameter.span(0.0F, 0.8F);           // erosion
-        final Climate.Parameter depth = Climate.Parameter.span(0.3F, 0.5F);             // depth
-        final Climate.Parameter weirdness = Climate.Parameter.span(-0.3F, 0.3F);       // weirdness
-
-        /*mapper.accept(Pair.of(Climate.parameters(temperature,humidity,continentalness,erosion,depth,weirdness,0.0F), ModBiomes.GLOOM_PLAINS));*/
+        final Climate.Parameter temperature = Climate.Parameter.span(-0.45F, -0.15F);      // temperature
+        final Climate.Parameter humidity = Climate.Parameter.span(-1.0F, -0.35F);          // humidity
+        final Climate.Parameter continentalness = Climate.Parameter.span(0.2F,0.6F);  // continentalness
+        final Climate.Parameter erosion = Climate.Parameter.span(-0.78F, -0.375F);           // erosion
+        final Climate.Parameter weirdness = Climate.Parameter.span(-0.2F, 0.2F);       // weirdness
+        final Climate.Parameter depth = Climate.Parameter.point(0.0F);             // depth
+        Climate.ParameterPoint gloomPoint = new Climate.ParameterPoint(
+                temperature,
+                humidity,
+                continentalness,
+                erosion,
+                depth,
+                weirdness,
+                0L
+        );
+       // this.addBiome(mapper,gloomPoint, ModBiomes.GLOOM_PLAINS);
         this.addBiomeSimilar(mapper, Biomes.PLAINS, ModBiomes.GLOOM_PLAINS);
+        this.addBiomeSimilar(mapper,Biomes.SUNFLOWER_PLAINS,ModBiomes.GLOOM_PLAINS);
+        this.addBiomeSimilar(mapper,Biomes.MEADOW,ModBiomes.GLOOM_PLAINS);
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
 
         });
