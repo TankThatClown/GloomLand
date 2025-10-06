@@ -8,9 +8,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.tank.gloom.entity.ModEntities;
-import net.tank.gloom.entity.client.GlowToadModel;
-import net.tank.gloom.entity.client.GlowToadRenderer;
-import net.tank.gloom.entity.client.ModModelLayer;
+import net.tank.gloom.entity.client.*;
 import static net.tank.gloom.GloomMod.MODID;
 
 @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -22,6 +20,7 @@ public class ModClientEvents {
         // Some client setup code
         EntityRenderers.register(ModEntities.MUCK_BOMB_ENTITY.get(), ThrownItemRenderer::new);
         EntityRenderers.register(ModEntities.GLOW_TOAD_ENTITY.get(), GlowToadRenderer::new);
+        EntityRenderers.register(ModEntities.CRYSTAL_BOAR_ENTITY.get(), CrystalBoarRenderer::new);
     }
 
     @SubscribeEvent

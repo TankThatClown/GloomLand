@@ -5,7 +5,7 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.tank.gloom.entity.ModEntities;
-import net.tank.gloom.entity.custom.GlowToadEntity;
+import net.tank.gloom.entity.custom.*;
 
 import static net.tank.gloom.GloomMod.MODID;
 
@@ -15,5 +15,7 @@ public class ModCommonEvents {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.GLOW_TOAD_ENTITY.get(), GlowToadEntity.createAttributes().build());
+        event.put(ModEntities.CRYSTAL_BOAR_ENTITY.get(), CrystalBoarEntity.createAttributes().build());
+
     }
 }

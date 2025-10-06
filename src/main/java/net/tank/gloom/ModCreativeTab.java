@@ -43,6 +43,7 @@ public class ModCreativeTab {
                 output.accept(ModMobDropItems.TOAD_HIDE.get());
                 // Spawn Eggs
                 output.accept(ModSpawnEggItems.GLOW_TOAD_SPAWN_EGG.get());
+                output.accept(ModSpawnEggItems.CRYSTAL_BOAR_SPAWN_EGG.get());
             })
             .build()
     );

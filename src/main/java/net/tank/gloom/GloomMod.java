@@ -24,6 +24,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
+import software.bernie.geckolib.GeckoLib;
 import terrablender.api.SurfaceRuleManager;
 import org.slf4j.Logger;
 import net.tank.gloom.entity.*;
@@ -54,6 +55,7 @@ public class GloomMod
         ModEntities.register(modEventBus);
         ModSpawnEggItems.register(modEventBus);
         ModTerrablender.registerBiomes();
+        GeckoLib.initialize();
         //Register the Deferred Register to the mod event bus so tabs get registered
         ModCreativeTab.register(modEventBus);
         // Register ourselves for server and other game events we are interested in

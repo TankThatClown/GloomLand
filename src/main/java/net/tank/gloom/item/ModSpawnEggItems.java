@@ -15,6 +15,9 @@ public class ModSpawnEggItems {
     public static final RegistryObject<Item> GLOW_TOAD_SPAWN_EGG = SPAWN_EGG_ITEMS.register("glow_toad_spawn_egg",
             ()-> new ForgeSpawnEggItem(ModEntities.GLOW_TOAD_ENTITY, 0x57B3F4,0x498EE0,
                             new Item.Properties()));
+    public static final RegistryObject<Item> CRYSTAL_BOAR_SPAWN_EGG = SPAWN_EGG_ITEMS.register("crystal_boar_spawn_egg",
+            ()-> new ForgeSpawnEggItem(ModEntities.CRYSTAL_BOAR_ENTITY, 0x5e442b,0x8a2be2,
+                    new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         SPAWN_EGG_ITEMS.register(eventBus);

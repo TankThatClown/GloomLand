@@ -18,7 +18,12 @@ public class ModEntities {
      public static final RegistryObject<EntityType<GlowToadEntity>> GLOW_TOAD_ENTITY =
             ENTITY_TYPES.register("glow_toad", () -> EntityType.Builder.of(GlowToadEntity::new, MobCategory.CREATURE)
                     .sized(0.9f, 1.0f).build("glow_toad"));
-    
+
+    public static final RegistryObject<EntityType<CrystalBoarEntity>> CRYSTAL_BOAR_ENTITY =
+            ENTITY_TYPES.register("crystal_boar", () -> EntityType.Builder.of(CrystalBoarEntity::new, MobCategory.CREATURE)
+                    .sized(1.5f, 1.4f).build("crystal_boar"));
+
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

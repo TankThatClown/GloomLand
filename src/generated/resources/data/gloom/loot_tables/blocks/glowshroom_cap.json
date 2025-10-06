@@ -24,21 +24,32 @@
                   }
                 }
               ],
-              "name": "gloom:gloom_gold_ore"
+              "name": "gloom:glowshroom_cap"
             },
             {
-              "type": "minecraft:item",
-              "functions": [
+              "type": "minecraft:alternatives",
+              "children": [
                 {
-                  "enchantment": "minecraft:fortune",
-                  "formula": "minecraft:ore_drops",
-                  "function": "minecraft:apply_bonus"
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.1,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "gloom:glowshroom_cap"
                 },
                 {
-                  "function": "minecraft:explosion_decay"
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "chance": 0.1,
+                      "condition": "minecraft:random_chance"
+                    }
+                  ],
+                  "name": "gloom:glowshroom"
                 }
-              ],
-              "name": "minecraft:raw_gold"
+              ]
             }
           ]
         }
@@ -46,5 +57,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:blocks/iron_ore"
+  "random_sequence": "gloom:blocks/glowshroom_cap"
 }

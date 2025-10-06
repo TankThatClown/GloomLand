@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:all_of",
+                  "terms": [
+                    {
+                      "block": "gloom:shadowberry_bush",
+                      "condition": "minecraft:block_state_property",
+                      "properties": {
+                        "age": "1"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "enchantments": [
+                          {
+                            "enchantment": "minecraft:silk_touch",
+                            "levels": {
+                              "min": 1
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ],
+              "name": "gloom:shadowberry_bush"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "gloom:bare_shadowberry_bush"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "gloom:blocks/shadowberry_bush"
+}

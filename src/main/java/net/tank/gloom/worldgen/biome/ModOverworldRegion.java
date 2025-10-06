@@ -27,7 +27,7 @@ public class ModOverworldRegion extends Region {
 
         new ParameterPointListBuilder()
                 .temperature(Temperature.span(Temperature.NEUTRAL, Temperature.WARM))
-                .humidity(Humidity.span(Humidity.ARID, Humidity.DRY))
+                .humidity(Humidity.span(Humidity.NEUTRAL, Humidity.DRY))
                 .continentalness(Continentalness.INLAND)
                 .erosion(Erosion.EROSION_0, Erosion.EROSION_1)
                 .depth(Depth.FULL_RANGE)
