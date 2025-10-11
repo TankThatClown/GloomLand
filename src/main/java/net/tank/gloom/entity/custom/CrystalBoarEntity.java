@@ -113,6 +113,7 @@ public class CrystalBoarEntity extends Animal implements GeoEntity {
                  double d0 = this.getAttackReachSqr(pEnemy);
                  if (pDistToEnemySqr <= d0 && this.getTicksUntilNextAttack() <= 0) {
                      ((CrystalBoarEntity)this.mob).setAttacking(true);
+                     this.mob.getLookControl().setLookAt(pEnemy, 30.0F, 30.0F);
                      this.resetAttackCooldown();
                      this.mob.swing(InteractionHand.MAIN_HAND);
                      this.mob.doHurtTarget(pEnemy);
