@@ -28,7 +28,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> MINER_WISH = ITEMS.register("miner_wish",
             ()->new MinerWishItem(new Item.Properties().stacksTo(16)));
-
+    public static final RegistryObject<Item> SHADOWSTEEL_INGOT = ITEMS.register("shadowsteel_ingot",
+            ()->new Item(new Item.Properties().stacksTo(16)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

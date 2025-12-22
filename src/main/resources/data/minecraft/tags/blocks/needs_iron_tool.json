@@ -1,6 +1,8 @@
 {
     "values":[
         "gloom:muck_block",
-        "gloom:gloom_gold_ore"
+        "gloom:gloom_gold_ore",
+        "gloom:shadowsteel_ore",
+        "gloom:deepslate_shadowsteel_ore"
     ]
 }

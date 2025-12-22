@@ -8,7 +8,8 @@
     "gloom:placed_gold_vein",
     "gloom:placed_redstone_vein",
     "gloom:placed_lapis_vein",
-    "gloom:placed_diamond_vein"
+    "gloom:placed_diamond_vein",
+    "gloom:placed_shadowsteel_vein"
   ],
   "step": "underground_ores"
 }

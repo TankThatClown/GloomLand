@@ -1,5 +1,6 @@
 package net.tank.gloom;
 import net.minecraft.core.registries.Registries;
+import net.tank.gloom.block.ModOreBlocks;
 import net.tank.gloom.item.*;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -18,15 +19,18 @@ public class ModCreativeTab {
             .title(Component.translatable("itemGroup.gloom_tab")) // Your tab's display name
             .icon(() -> new ItemStack(ModBlockItems.MUCK_BLOCK.get()))
             .displayItems((itemDisplayParameters,output)->{
-                // Blocks
+                // Terrain Blocks
                 output.accept(ModBlockItems.GLOOMSTONE.get());
                 output.accept(ModBlockItems.GLOOM_DIRT.get());
                 output.accept(ModBlockItems.GLOOM_GRASS.get());
                 output.accept(ModBlockItems.MUCK_BLOCK.get());
-                output.accept(ModBlockItems.GLOWSHROOM_CAP.get());
-                output.accept(ModBlockItems.GLOWSHROOM_STALK.get());
                 output.accept(ModBlockItems.GLOOM_IRON_ORE.get());
                 output.accept(ModBlockItems.GLOOM_GOLD_ORE.get());
+                output.accept(ModBlockItems.SHADOWSTEEL_ORE.get());
+                output.accept(ModBlockItems.DEEPSLATE_SHADOWSTEEL_ORE.get());
+                //Plant BLocks
+                output.accept(ModBlockItems.GLOWSHROOM_CAP.get());
+                output.accept(ModBlockItems.GLOWSHROOM_STALK.get());
                 output.accept(ModBlockItems.GLOWSHROOM_SPORE.get());
                 output.accept(ModBlockItems.DUSK_LILY.get());
                 output.accept(ModBlockItems.SHADOWBERRY_BUSH.get());
@@ -36,6 +40,7 @@ public class ModCreativeTab {
                 output.accept(ModItems.GLOWING_STICK.get());
                 output.accept(ModItems.MUCK_BOMB.get());
                 output.accept(ModItems.MINER_WISH.get());
+                output.accept(ModItems.SHADOWSTEEL_INGOT.get());
                 // Food
                 output.accept(ModFoodItems.GLOWSHROOM.get());
                 output.accept(ModFoodItems.SHADOWBERRY.get());

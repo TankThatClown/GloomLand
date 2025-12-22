@@ -31,6 +31,7 @@ import net.tank.gloom.block.ModPlantBlocks;
 import net.tank.gloom.block.custom.GloomBushBlock;
 import net.tank.gloom.item.ModBlockItems;
 import net.tank.gloom.item.ModFoodItems;
+import net.tank.gloom.item.ModItems;
 import net.tank.gloom.tag.ModTags;
 
 import java.util.Arrays;
@@ -61,8 +62,10 @@ public class ModBlockLootTables extends BlockLootSubProvider{
         this.add(ModBlocks.GLOOM_GRASS.get(), block ->createSingleSilkTouchDrop(ModBlocks.GLOOM_GRASS.get(),ModBlockItems.GLOOM_DIRT.get()));
         this.add(ModBlocks.MUCK_BLOCK.get(), block ->createSingleIfDrop(ModBlockItems.MUCK_BLOCK.get(),HASPICKAXE));
         // Mod Ore
-       this.add(ModOreBlocks.GLOOM_IRON_ORE.get(),block -> createMultiOreDrops(ModOreBlocks.GLOOM_IRON_ORE.get(),ModBlockItems.GLOOM_IRON_ORE.get()));
-       this.add(ModOreBlocks.GLOOM_GOLD_ORE.get(),block -> createMultiOreDrops(ModOreBlocks.GLOOM_GOLD_ORE.get(),ModBlockItems.GLOOM_GOLD_ORE.get()));
+       this.add(ModOreBlocks.GLOOM_IRON_ORE.get(),block -> createMultiOreDrops(ModOreBlocks.GLOOM_IRON_ORE.get(), Items.IRON_INGOT,2.0f,4.0f));
+       this.add(ModOreBlocks.GLOOM_GOLD_ORE.get(),block -> createMultiOreDrops(ModOreBlocks.GLOOM_GOLD_ORE.get(),Items.GOLD_INGOT,2.0f,4.0f));
+       this.add(ModOreBlocks.SHADOWSTEEL_ORE.get(),block -> createMultiOreDrops(ModOreBlocks.SHADOWSTEEL_ORE.get(),ModItems.SHADOWSTEEL_INGOT.get(),1.0f,1.0f));
+       this.add(ModOreBlocks.DEEPSLATE_SHADOWSTEEL_ORE.get(),block -> createMultiOreDrops(ModOreBlocks.DEEPSLATE_SHADOWSTEEL_ORE.get(), ModItems.SHADOWSTEEL_INGOT.get(),1.0f,1.0f));
         //Plant Block
        this.dropSelf(ModPlantBlocks.GLOWSHROOM.get());
        this.dropSelf(ModPlantBlocks.GLOWSHROOM_SPORE.get());
@@ -109,11 +112,11 @@ public class ModBlockLootTables extends BlockLootSubProvider{
                         )
                 );
     }
-    protected LootTable.Builder createMultiOreDrops(Block block, Item item) {
+    protected LootTable.Builder createMultiOreDrops(Block block, Item item,float min, float max) {
         return createSilkTouchDispatchTable(block,
                 this.applyExplosionDecay(block,
                         LootItem.lootTableItem(item)
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 5.0F)))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(min, max)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
     }
     protected LootTable.Builder createSilkTouchElseAlternativeDrop(Item mainItem, LootPoolEntryContainer.Builder[] alternativeList)

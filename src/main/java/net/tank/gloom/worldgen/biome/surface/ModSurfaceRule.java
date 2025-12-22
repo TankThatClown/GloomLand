@@ -20,12 +20,12 @@ public class ModSurfaceRule {
     SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAboveWater, GRASS_BLOCK), DIRT);
     SurfaceRules.ConditionSource isAbove50 = SurfaceRules.yBlockCheck(VerticalAnchor.absolute(50), 0);
     SurfaceRules.RuleSource gloomRules = SurfaceRules.sequence(
-        SurfaceRules.ifTrue(isAbove50,
+        SurfaceRules.ifTrue(SurfaceRules.abovePreliminarySurface(),
             SurfaceRules.ifTrue(isAboveWater
             ,SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR,
             GLOOM_GRASS))
             ),
-        SurfaceRules.ifTrue(isAbove50,
+        SurfaceRules.ifTrue(SurfaceRules.abovePreliminarySurface(),
             SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, 
             GLOOM_DIRT)
             )

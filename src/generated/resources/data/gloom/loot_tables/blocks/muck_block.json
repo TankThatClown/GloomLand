@@ -10,7 +10,7 @@
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "tag": "minecraft:mineable/pickaxe"
+                "tag": "minecraft:pickaxes"
               }
             }
           ],

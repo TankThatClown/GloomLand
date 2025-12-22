@@ -37,6 +37,12 @@ public class ModBlockItems {
     public static final RegistryObject<Item> GLOOM_GOLD_ORE = BLOCK_ITEMS.register("gloom_gold_ore",
             ()-> new BlockItem(ModOreBlocks.GLOOM_GOLD_ORE.get(),new Item.Properties()));
 
+    public static final RegistryObject<Item> SHADOWSTEEL_ORE = BLOCK_ITEMS.register("shadowsteel_ore",
+            ()-> new BlockItem(ModOreBlocks.SHADOWSTEEL_ORE.get(),new Item.Properties()));
+
+    public static final RegistryObject<Item> DEEPSLATE_SHADOWSTEEL_ORE = BLOCK_ITEMS.register("deepslate_shadowsteel_ore",
+            ()-> new BlockItem(ModOreBlocks.DEEPSLATE_SHADOWSTEEL_ORE.get(),new Item.Properties()));
+
       public static final RegistryObject<Item> DUSK_LILY = BLOCK_ITEMS.register("dusk_lily",
     ()-> new BlockItem(ModPlantBlocks.DUSK_LILY.get(),new Item.Properties()));
 

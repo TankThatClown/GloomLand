@@ -26,6 +26,10 @@ public class ModOreBlocks {
 
     public static final RegistryObject<Block> GLOOM_GOLD_ORE = ORE_BLOCKS.register("gloom_gold_ore",
             ()-> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_ORE)));
+    public static final RegistryObject<Block> SHADOWSTEEL_ORE = ORE_BLOCKS.register("shadowsteel_ore",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.COLOR_MAGENTA)));
+    public static final RegistryObject<Block> DEEPSLATE_SHADOWSTEEL_ORE = ORE_BLOCKS.register("deepslate_shadowsteel_ore",
+            ()-> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).mapColor(MapColor.COLOR_MAGENTA)));
 
      public static void register(IEventBus eventBus){
         ORE_BLOCKS.register(eventBus);

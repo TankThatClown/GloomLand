@@ -1,7 +1,10 @@
 package net.tank.gloom.datagen.loot;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.registries.RegistryObject;
@@ -9,6 +12,7 @@ import net.tank.gloom.entity.ModEntities;
 import net.minecraft.data.loot.EntityLootSubProvider;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.tank.gloom.item.ModMobDropItems;
 
 import java.util.Set;
@@ -25,7 +29,14 @@ public class ModEntityLootTables extends EntityLootSubProvider {
                 .withPool(LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1.0F))
                             .add(LootItem.lootTableItem(ModMobDropItems.TOAD_HIDE.get()))
-                                .when(LootItemRandomChanceCondition.randomChance(0.5F))
+                            .when(LootItemRandomChanceCondition.randomChance(0.5F))
+                )
+        );
+        this.add(ModEntities.CRYSTAL_BOAR_ENTITY.get(), LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0F))
+                        .add(LootItem.lootTableItem(Items.PORKCHOP))
+                        .when(LootItemRandomChanceCondition.randomChance(1.0F))
                 )
         );
     }
