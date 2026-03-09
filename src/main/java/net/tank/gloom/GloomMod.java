@@ -37,6 +37,7 @@ public class GloomMod
         ModOreBlocks.register(modEventBus);
         ModPlantBlocks.register(modEventBus);
         ModItems.register(modEventBus);
+        ModEquipmentItems.register(modEventBus);
         ModBlockItems.register(modEventBus);
         ModFoodItems.register(modEventBus);
         ModMobDropItems.register(modEventBus);

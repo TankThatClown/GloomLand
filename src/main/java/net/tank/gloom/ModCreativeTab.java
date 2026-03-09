@@ -41,6 +41,13 @@ public class ModCreativeTab {
                 output.accept(ModItems.MUCK_BOMB.get());
                 output.accept(ModItems.MINER_WISH.get());
                 output.accept(ModItems.SHADOWSTEEL_INGOT.get());
+                //Equipment
+                output.accept(ModEquipmentItems.SHADOWSTEEL_SWORD.get());
+                output.accept(ModEquipmentItems.SHADOWSTEEL_AXE.get());
+                output.accept(ModEquipmentItems.SHADOWSTEEL_PICKAXE.get());
+                output.accept(ModEquipmentItems.SHADOWSTEEL_SHOVEL.get());
+                output.accept(ModEquipmentItems.SHADOWSTEEL_HOE.get());
+
                 // Food
                 output.accept(ModFoodItems.GLOWSHROOM.get());
                 output.accept(ModFoodItems.SHADOWBERRY.get());

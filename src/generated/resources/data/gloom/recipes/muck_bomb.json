@@ -1,24 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    " M ",
-    "STS",
-    "SMS"
-  ],
   "key": {
+    "M": {
+      "item": "gloom:muck_block"
+    },
     "S": {
       "tag": "gloom:stone_replaceables"
     },
     "T": {
       "item": "minecraft:tnt"
-    },
-    "M": {
-      "item": "gloom:muck_block"
     }
   },
+  "pattern": [
+    " M ",
+    "STS",
+    "SMS"
+  ],
   "result": {
-    "item": "gloom:muck_bomb",
-    "count": 1
-  }
+    "item": "gloom:muck_bomb"
+  },
+  "show_notification": true
 }

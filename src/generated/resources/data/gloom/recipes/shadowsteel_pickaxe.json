@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "item": "gloom:glowing_stick"
+    },
+    "S": {
+      "item": "gloom:shadowsteel_ingot"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " G ",
+    " G "
+  ],
+  "result": {
+    "item": "gloom:shadowsteel_pickaxe"
+  },
+  "show_notification": true
+}
