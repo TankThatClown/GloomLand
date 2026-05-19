@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.AlternativesEntry;
@@ -57,15 +58,14 @@ public class ModBlockLootTables extends BlockLootSubProvider{
 
 
        //ModBlocks
-        this.dropSelf(ModBlocks.GLOOM_DIRT.get());
         this.dropSelf(ModBlocks.GLOOMSTONE.get());
-        this.add(ModBlocks.GLOOM_GRASS.get(), block ->createSingleSilkTouchDrop(ModBlocks.GLOOM_GRASS.get(),ModBlockItems.GLOOM_DIRT.get()));
+        this.add(ModBlocks.GLOOM_GRASS.get(), block ->createSingleSilkTouchDrop(ModBlocks.GLOOM_GRASS.get(), Items.DIRT));
         this.add(ModBlocks.MUCK_BLOCK.get(), block ->createSingleIfDrop(ModBlockItems.MUCK_BLOCK.get(),HASPICKAXE));
         // Mod Ore
        this.add(ModOreBlocks.GLOOM_IRON_ORE.get(),block -> createMultiOreDrops(ModOreBlocks.GLOOM_IRON_ORE.get(), Items.IRON_INGOT,2.0f,4.0f));
        this.add(ModOreBlocks.GLOOM_GOLD_ORE.get(),block -> createMultiOreDrops(ModOreBlocks.GLOOM_GOLD_ORE.get(),Items.GOLD_INGOT,2.0f,4.0f));
-       this.add(ModOreBlocks.SHADOWSTEEL_ORE.get(),block -> createMultiOreDrops(ModOreBlocks.SHADOWSTEEL_ORE.get(),ModItems.SHADOWSTEEL_INGOT.get(),1.0f,1.0f));
-       this.add(ModOreBlocks.DEEPSLATE_SHADOWSTEEL_ORE.get(),block -> createMultiOreDrops(ModOreBlocks.DEEPSLATE_SHADOWSTEEL_ORE.get(), ModItems.SHADOWSTEEL_INGOT.get(),1.0f,1.0f));
+       this.dropSelf(ModOreBlocks.SHADOWSTEEL_ORE.get());
+       this.dropSelf(ModOreBlocks.DEEPSLATE_SHADOWSTEEL_ORE.get());
         //Plant Block
        this.dropSelf(ModPlantBlocks.GLOWSHROOM.get());
        this.dropSelf(ModPlantBlocks.GLOWSHROOM_SPORE.get());

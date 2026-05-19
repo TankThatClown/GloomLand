@@ -30,8 +30,6 @@ public class ModBlocks{
         .sound(SoundType.STONE)
         .requiresCorrectToolForDrops()
     ));
-     public static final RegistryObject<Block> GLOOM_DIRT = BLOCKS.register("gloom_dirt", 
-    () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
      public static final RegistryObject<Block> GLOOM_GRASS = BLOCKS.register("gloom_grass", 
     () -> new GloomGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));

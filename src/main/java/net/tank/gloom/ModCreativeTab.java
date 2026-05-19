@@ -21,7 +21,6 @@ public class ModCreativeTab {
             .displayItems((itemDisplayParameters,output)->{
                 // Terrain Blocks
                 output.accept(ModBlockItems.GLOOMSTONE.get());
-                output.accept(ModBlockItems.GLOOM_DIRT.get());
                 output.accept(ModBlockItems.GLOOM_GRASS.get());
                 output.accept(ModBlockItems.MUCK_BLOCK.get());
                 output.accept(ModBlockItems.GLOOM_IRON_ORE.get());
@@ -47,6 +46,11 @@ public class ModCreativeTab {
                 output.accept(ModEquipmentItems.SHADOWSTEEL_PICKAXE.get());
                 output.accept(ModEquipmentItems.SHADOWSTEEL_SHOVEL.get());
                 output.accept(ModEquipmentItems.SHADOWSTEEL_HOE.get());
+
+                output.accept(ModEquipmentItems.SHADOWSTEEL_HELMET.get());
+                output.accept(ModEquipmentItems.SHADOWSTEEL_CHESTPLATE.get());
+                output.accept(ModEquipmentItems.SHADOWSTEEL_LEGGINGS.get());
+                output.accept(ModEquipmentItems.SHADOWSTEEL_BOOTS.get());
 
                 // Food
                 output.accept(ModFoodItems.GLOWSHROOM.get());

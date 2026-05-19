@@ -1,10 +1,9 @@
-// 1.20.1	2025-12-22T17:31:51.8025185	Loot Tables
-67f0b5dfa037579a97e3bc4d053a7700fbbad1c5 data/gloom/loot_tables/blocks/deepslate_shadowsteel_ore.json
+// 1.20.1	2026-03-16T23:20:36.3391179	Loot Tables
+4dc2c5b222ee8a2038518c2697c9bb868ff6c3de data/gloom/loot_tables/blocks/deepslate_shadowsteel_ore.json
 87608716e615813552daf03b208ba19abc583167 data/gloom/loot_tables/blocks/dusk_lily.json
 4c5921e1d06672f8a932cd28a14a6164be26d68a data/gloom/loot_tables/blocks/gloomstone.json
-6487b08fafa0ea1880e334e96e1c0df0fa7ec28a data/gloom/loot_tables/blocks/gloom_dirt.json
 45a3c4504ab668676ed079ebb64682d9e348796c data/gloom/loot_tables/blocks/gloom_gold_ore.json
-7d55e19ea8c754dc07a0d2321162da8041ba3c47 data/gloom/loot_tables/blocks/gloom_grass.json
+1d1f2ec89b78f527f78bf1a835fb46bd6d66f223 data/gloom/loot_tables/blocks/gloom_grass.json
 854052772bdc9c97948ed6b34dc1731e1612938f data/gloom/loot_tables/blocks/gloom_iron_ore.json
 50317e11cb077ba8c4850de101bb653af73f1ebb data/gloom/loot_tables/blocks/glowshroom.json
 92d94f9408543bdfd90ffaf80d33b7a62e706746 data/gloom/loot_tables/blocks/glowshroom_cap.json
@@ -12,6 +11,6 @@
 1db5e1408f45b8e592999e78bf751ee5b04fa38a data/gloom/loot_tables/blocks/glowshroom_stalk.json
 66d839d96a1b824247a6d955d53864e1071e35ad data/gloom/loot_tables/blocks/muck_block.json
 477e324038fe02d93c924e00e5dca063987f9b20 data/gloom/loot_tables/blocks/shadowberry_bush.json
-3deedea14801f4bfb9b86fb233e47ce7040a795a data/gloom/loot_tables/blocks/shadowsteel_ore.json
+856361e17b839ff6f570556809d6a656905d72fe data/gloom/loot_tables/blocks/shadowsteel_ore.json
 6e7db1c6cb2ee0565a37eb1cbcee090e7f38e74c data/gloom/loot_tables/entities/crystal_boar.json
 67dfb9331fd802a7be15bae5f93f6654c2fd53df data/gloom/loot_tables/entities/glow_toad.json

@@ -18,8 +18,6 @@ public class ModBlockItems {
             public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GloomMod.MODID);
             public static final RegistryObject<Item> GLOOMSTONE =BLOCK_ITEMS.register("gloomstone",
         () -> new BlockItem(ModBlocks.GLOOMSTONE.get(), new Item.Properties()));
-        public static final RegistryObject<Item> GLOOM_DIRT = BLOCK_ITEMS.register("gloom_dirt", 
-        () -> new BlockItem(ModBlocks.GLOOM_DIRT.get(), new Item.Properties()));
         public static final RegistryObject<Item> GLOOM_GRASS= BLOCK_ITEMS.register("gloom_grass", 
         () -> new BlockItem(ModBlocks.GLOOM_GRASS.get(), new Item.Properties()));
     public static final RegistryObject<Item> GLOWSHROOM_CAP = BLOCK_ITEMS.register("glowshroom_cap",

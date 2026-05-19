@@ -9,6 +9,9 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.tank.gloom.block.ModBlocks;
 import net.tank.gloom.block.ModPlantBlocks;
+import net.tank.gloom.datagen.recipe.CookingRecipeProvider;
+import net.tank.gloom.datagen.recipe.EquipmentRecipeProvider;
+import net.tank.gloom.datagen.recipe.MiscRecipeProvider;
 import net.tank.gloom.item.ModEquipmentItems;
 import net.tank.gloom.item.ModItems;
 import net.tank.gloom.tag.ModTags;
@@ -22,72 +25,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> writer) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLOWING_STICK.get(), 8)
-                .pattern("X")
-                .pattern("X")
-                .define('X', ModPlantBlocks.GLOWSHROOM_STALK.get())
-                .unlockedBy(getHasName(ModPlantBlocks.GLOWSHROOM_STALK.get()), has(ModPlantBlocks.GLOWSHROOM_STALK.get()))
-                .save(writer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MINER_WISH.get(),2)
-                .pattern("CCC")
-                .pattern("III")
-                .pattern("GGG")
-                .define('C', Items.COAL_BLOCK)
-                .define('I', Items.IRON_BLOCK)
-                .define('G', Items.GOLD_BLOCK)
-                .unlockedBy(getHasName(Items.GOLD_BLOCK), has(Items.GOLD_BLOCK))
-                .save(writer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MUCK_BOMB.get())
-                .pattern(" M ")
-                .pattern("STS")
-                .pattern("SMS")
-                .define('S', ModTags.STONE_REPLACEABLES)
-                .define('T', Items.TNT)
-                .define('M', ModBlocks.MUCK_BLOCK.get())
-                .unlockedBy(getHasName(Items.TNT), has(Items.TNT))
-                .save(writer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModEquipmentItems.SHADOWSTEEL_SWORD.get())
-                .pattern("S")
-                .pattern("S")
-                .pattern("G")
-                .define('S', ModItems.SHADOWSTEEL_INGOT.get())
-                .define('G',ModItems.GLOWING_STICK.get())
-                .unlockedBy(getHasName(ModItems.SHADOWSTEEL_INGOT.get()), has(ModItems.SHADOWSTEEL_INGOT.get()))
-                .save(writer);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModEquipmentItems.SHADOWSTEEL_AXE.get())
-                .pattern("SS")
-                .pattern("SG")
-                .pattern(" G")
-                .define('S', ModItems.SHADOWSTEEL_INGOT.get())
-                .define('G',ModItems.GLOWING_STICK.get())
-                .unlockedBy(getHasName(ModItems.SHADOWSTEEL_INGOT.get()), has(ModItems.SHADOWSTEEL_INGOT.get()))
-                .save(writer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModEquipmentItems.SHADOWSTEEL_PICKAXE.get())
-                .pattern("SSS")
-                .pattern(" G ")
-                .pattern(" G ")
-                .define('S', ModItems.SHADOWSTEEL_INGOT.get())
-                .define('G',ModItems.GLOWING_STICK.get())
-                .unlockedBy(getHasName(ModItems.SHADOWSTEEL_INGOT.get()), has(ModItems.SHADOWSTEEL_INGOT.get()))
-                .save(writer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModEquipmentItems.SHADOWSTEEL_SHOVEL.get())
-                .pattern("S")
-                .pattern("G")
-                .pattern("G")
-                .define('S', ModItems.SHADOWSTEEL_INGOT.get())
-                .define('G',ModItems.GLOWING_STICK.get())
-                .unlockedBy(getHasName(ModItems.SHADOWSTEEL_INGOT.get()), has(ModItems.SHADOWSTEEL_INGOT.get()))
-                .save(writer);
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModEquipmentItems.SHADOWSTEEL_HOE.get())
-                .pattern("SS")
-                .pattern(" G")
-                .pattern(" G")
-                .define('S', ModItems.SHADOWSTEEL_INGOT.get())
-                .define('G',ModItems.GLOWING_STICK.get())
-                .unlockedBy(getHasName(ModItems.SHADOWSTEEL_INGOT.get()), has(ModItems.SHADOWSTEEL_INGOT.get()))
-                .save(writer);
+        new EquipmentRecipeProvider().register(writer);
+        new MiscRecipeProvider().register(writer);
+        new CookingRecipeProvider().register(writer);
     }
 }

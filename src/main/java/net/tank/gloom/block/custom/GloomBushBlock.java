@@ -64,7 +64,7 @@ public class GloomBushBlock extends Block implements BonemealableBlock {
 
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockState below = level.getBlockState(pos.below());
-        return below.is(ModBlocks.GLOOM_DIRT.get()) || below.is(ModBlocks.GLOOM_GRASS.get());
+        return  below.is(ModBlocks.GLOOM_GRASS.get());
     }
 
     @Override

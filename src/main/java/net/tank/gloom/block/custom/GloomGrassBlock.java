@@ -40,7 +40,7 @@ public class GloomGrassBlock extends GrassBlock {
         if (!canBeGrass(pState, pLevel, pPos)) {
             if (!pLevel.isAreaLoaded(pPos, 1))
                 return; // Forge: prevent loading unloaded chunks when checking neighbor's light and spreading
-            pLevel.setBlockAndUpdate(pPos, ModBlocks.GLOOM_DIRT.get().defaultBlockState());
+            pLevel.setBlockAndUpdate(pPos, Blocks.DIRT.defaultBlockState());
         } else {
             if (!pLevel.isAreaLoaded(pPos, 3))
                 return; // Forge: prevent loading unloaded chunks when checking neighbor's light and spreading
@@ -49,7 +49,7 @@ public class GloomGrassBlock extends GrassBlock {
 
                 for (int i = 0; i < 4; ++i) {
                     BlockPos blockpos = pPos.offset(pRandom.nextInt(3) - 1, pRandom.nextInt(5) - 3, pRandom.nextInt(3) - 1);
-                    if (pLevel.getBlockState(blockpos).is(ModBlocks.GLOOM_DIRT.get()) && canPropagate(blockstate, pLevel, blockpos)) {
+                    if (pLevel.getBlockState(blockpos).is(Blocks.DIRT) && canPropagate(blockstate, pLevel, blockpos)) {
                         pLevel.setBlockAndUpdate(blockpos, blockstate.setValue(SNOWY, Boolean.valueOf(pLevel.getBlockState(blockpos.above()).is(Blocks.SNOW))));
                     }
                 }

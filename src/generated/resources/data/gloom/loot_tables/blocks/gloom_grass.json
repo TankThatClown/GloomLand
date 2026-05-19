@@ -28,7 +28,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "gloom:gloom_dirt"
+              "name": "minecraft:dirt"
             }
           ]
         }

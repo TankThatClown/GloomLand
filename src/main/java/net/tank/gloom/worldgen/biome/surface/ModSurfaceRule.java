@@ -8,7 +8,6 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.tank.gloom.worldgen.biome.ModBiomes;
 import net.minecraft.world.level.block.Blocks;
 public class ModSurfaceRule {
-    private static final SurfaceRules.RuleSource GLOOM_DIRT=makeStateRule(ModBlocks.GLOOM_DIRT.get());
     private static final SurfaceRules.RuleSource GLOOM_GRASS=makeStateRule(ModBlocks.GLOOM_GRASS.get());
     private static final SurfaceRules.RuleSource GLOOM_STONE=makeStateRule(ModBlocks.GLOOMSTONE.get());
     private static final SurfaceRules.RuleSource DIRT = makeStateRule(Blocks.DIRT);
@@ -27,7 +26,7 @@ public class ModSurfaceRule {
             ),
         SurfaceRules.ifTrue(SurfaceRules.abovePreliminarySurface(),
             SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, 
-            GLOOM_DIRT)
+            DIRT)
             )
     );
 

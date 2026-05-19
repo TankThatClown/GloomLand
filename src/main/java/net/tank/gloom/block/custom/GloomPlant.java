@@ -12,6 +12,6 @@ public  class GloomPlant extends BushBlock{
         public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
         BlockPos belowPos = pos.below();
         BlockState belowState = world.getBlockState(belowPos);
-        return belowState.is(ModBlocks.GLOOM_DIRT.get()) || belowState.is(ModBlocks.GLOOM_GRASS.get());
+        return belowState.is(ModBlocks.GLOOM_GRASS.get());
         } 
     }

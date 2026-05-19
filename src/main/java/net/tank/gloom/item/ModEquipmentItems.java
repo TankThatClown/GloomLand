@@ -1,11 +1,14 @@
 package net.tank.gloom.item;
 
+import net.minecraft.world.entity.decoration.ArmorStand;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.ArmorItem.Type;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tank.gloom.GloomMod;
+import net.tank.gloom.item.custom.ModArmorMaterials;
 
 public class ModEquipmentItems {
     public static final DeferredRegister<Item> EQUIPMENT_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GloomMod.MODID);
@@ -22,5 +25,26 @@ public class ModEquipmentItems {
     public static void register(IEventBus eventBus){
         EQUIPMENT_ITEMS.register(eventBus);
     }
+    public static final RegistryObject<Item> SHADOWSTEEL_HELMET= 
+            EQUIPMENT_ITEMS.register("shadowsteel_helmet",
+                    ()->new ArmorItem(ModArmorMaterials.SHADOWSTEEL,
+                            Type.HELMET,
+                            new Item.Properties()));
+    public static final RegistryObject<Item> SHADOWSTEEL_CHESTPLATE =
+            EQUIPMENT_ITEMS.register("shadowsteel_chestplate",
+                    () -> new ArmorItem(ModArmorMaterials.SHADOWSTEEL,
+                            Type.CHESTPLATE,
+                            new Item.Properties()));
 
+    public static final RegistryObject<Item> SHADOWSTEEL_LEGGINGS =
+            EQUIPMENT_ITEMS.register("shadowsteel_leggings",
+                    () -> new ArmorItem(ModArmorMaterials.SHADOWSTEEL,
+                            Type.LEGGINGS,
+                            new Item.Properties()));
+
+    public static final RegistryObject<Item> SHADOWSTEEL_BOOTS =
+            EQUIPMENT_ITEMS.register("shadowsteel_boots",
+                    () -> new ArmorItem(ModArmorMaterials.SHADOWSTEEL,
+                            Type.BOOTS,
+                            new Item.Properties()));
 }
