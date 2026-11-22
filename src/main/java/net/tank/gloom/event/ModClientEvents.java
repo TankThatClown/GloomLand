@@ -23,10 +23,5 @@ public class ModClientEvents {
         EntityRenderers.register(ModEntities.CRYSTAL_BOAR_ENTITY.get(), CrystalBoarRenderer::new);
     }
 
-    @SubscribeEvent
-    public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(ModModelLayer.GLOW_TOAD_LAYER, GlowToadModel::createBodyLayer);
-    }
-
 
 }

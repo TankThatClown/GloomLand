@@ -1,29 +1,32 @@
 package net.tank.gloom.entity.client;
-import com.mojang.blaze3d.vertex.PoseStack;
 
-import net.tank.gloom.GloomMod;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
+import net.tank.gloom.GloomMod;
 import net.tank.gloom.entity.custom.GlowToadEntity;
+import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class GlowToadRenderer extends MobRenderer<GlowToadEntity, GlowToadModel<GlowToadEntity>> {
-    public GlowToadRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new GlowToadModel<>(pContext.bakeLayer(ModModelLayer.GLOW_TOAD_LAYER)), 1.0f);
+public class GlowToadRenderer extends GeoEntityRenderer<GlowToadEntity> {
+
+    public GlowToadRenderer(EntityRendererProvider.Context renderManager) {
+        super(renderManager, new GlowToadModel());
     }
 
     @Override
-    public ResourceLocation getTextureLocation(GlowToadEntity pEntity) {
-        return new ResourceLocation(GloomMod.MODID, "textures/entity/toad_texture.png");
+    public ResourceLocation getTextureLocation(GlowToadEntity entity) {
+        return new ResourceLocation(GloomMod.MODID, "textures/entity/glow_toad.png");
     }
 
     @Override
-    public void render(GlowToadEntity pEntity, float pEntityYaw, float pPartialTicks, PoseStack pMatrixStack,
-                       MultiBufferSource pBuffer, int pPackedLight) {
-        if(pEntity.isBaby()) {
-            pMatrixStack.scale(0.5f, 0.5f, 0.5f);
+    public void render(GlowToadEntity entity, float entityYaw, float partialTicks,
+                       PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
+        poseStack.pushPose();
+        if (entity.isBaby()) {
+            poseStack.scale(0.5f, 0.5f, 0.5f);
         }
-        super.render(pEntity, pEntityYaw, pPartialTicks, pMatrixStack, pBuffer, pPackedLight);
+        super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
+        poseStack.popPose();
     }
 }
