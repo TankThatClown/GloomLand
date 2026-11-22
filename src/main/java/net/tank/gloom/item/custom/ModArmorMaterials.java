@@ -21,7 +21,7 @@ public enum ModArmorMaterials implements StringRepresentable, ArmorMaterial {
 
     SHADOWSTEEL(
             "shadowsteel",
-            37,
+            41,
             Util.make(new EnumMap<>(ArmorItem.Type.class), defenseMap -> {
                 defenseMap.put(ArmorItem.Type.BOOTS, 3);
                 defenseMap.put(ArmorItem.Type.LEGGINGS, 6);
@@ -30,7 +30,7 @@ public enum ModArmorMaterials implements StringRepresentable, ArmorMaterial {
             }),
             15,
             SoundEvents.ARMOR_EQUIP_NETHERITE,
-            3.0F,
+            3.5F,
             0.1F,
             () -> Ingredient.of(ModItems.SHADOWSTEEL_INGOT.get())
     );
@@ -67,7 +67,6 @@ public enum ModArmorMaterials implements StringRepresentable, ArmorMaterial {
     public int getDurabilityForType(ArmorItem.Type pType) {
         return (Integer)HEALTH_FUNCTION_FOR_TYPE.get(pType) * this.durabilityMultiplier;
     }
-
     public int getDefenseForType(ArmorItem.Type pType) {
         return (Integer)this.protectionFunctionForType.get(pType);
     }
